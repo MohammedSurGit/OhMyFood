@@ -1,0 +1,31 @@
+:root{
+    /* couleurs */
+    --couleur-primaire: #9356DC;
+    --couleur-secondaire: #FF79DA;
+    --couleur-tertiaire: #99E2D0;
+    --gris: rgb(225, 225, 225);
+    --grid-clair: rgb(250, 250, 250);
+    --gris-fonce: grey;
+    --gris-tres-fonce: rgb(86, 86, 86);
+
+    /* typographie */
+    --font-size-base: 1em;
+    --font-size-m: 1.2em;
+
+
+    /* espaces */
+    --espace-xxs: 0.6em;
+    --espace-xs: 0.8em;
+    --espace-s: 1em;
+    --espace-m: 1.4em;
+    --espace-l: 1.6em;
+    --espace-xxxl: 14em;
+
+    /* ombres */
+    --ombre: 5px 5px 10px silver;
+}
+
+body{ 
+    padding: 0;
+    margin: 0;
+}
