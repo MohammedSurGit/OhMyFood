@@ -11,6 +11,7 @@
     --noir: black;
 
     /* typographie */
+    --font-size-xs: 0.8em;
     --font-size-base: 1em;
     --font-size-xm: 1.1em;
     --font-size-m: 1.4em;
@@ -43,8 +44,24 @@ body {
     font-family: var(--police-texte);
 }
 
-h2{
+@media screen and (min-width: 1024px) {
+    body > *:not(header) { 
+        text-align: left;
+    }
+}
+
+h2 {
     font-size: var(--font-size-l)
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
 }
 
 /* En-tête */
@@ -95,4 +112,43 @@ header div:last-child button {
     color: var(--blanc);
     font-size: var(--font-size-xm);
     box-shadow: var(--ombre-boutton);
+}
+
+
+
+
+/* Pied de page */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espace-xs);
+    background-color: var(--gris-tres-fonce);
+    color: var(--blanc);
+    padding: var(--espace-xs);
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        align-items: flex-start;
+        padding: var(--espace-xs) var(--espace-xxxl);
+    }
+}
+
+footer svg{
+    height: var(--font-size-base);
+    width: auto;
+}
+
+footer a{
+    font-size: var(--font-size-xs);
+}
+
+footer ul{
+    margin: 0;
+    width: 100%;
+}
+
+a i {
+    margin-right: var(--espace-xxs)
 }
