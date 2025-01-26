@@ -1,31 +1,98 @@
-:root{
+:root {
     /* couleurs */
     --couleur-primaire: #9356DC;
     --couleur-secondaire: #FF79DA;
     --couleur-tertiaire: #99E2D0;
-    --gris: rgb(225, 225, 225);
-    --grid-clair: rgb(250, 250, 250);
-    --gris-fonce: grey;
-    --gris-tres-fonce: rgb(86, 86, 86);
+    --gris: #f3f3f3;
+    --gris-clair: #fafafa;
+    --gris-fonce: #4d4d4d;
+    --gris-tres-fonce: #353535;
+    --blanc: white;
+    --noir: black;
 
     /* typographie */
     --font-size-base: 1em;
-    --font-size-m: 1.2em;
-
+    --font-size-xm: 1.1em;
+    --font-size-m: 1.4em;
+    --font-size-l: 1.5em;
+    --police-texte: "Roboto";
+    --police-titre: "Shrikhand", sans-serif;
 
     /* espaces */
-    --espace-xxs: 0.6em;
+    --espace-xxs: 0.4em;
     --espace-xs: 0.8em;
     --espace-s: 1em;
     --espace-m: 1.4em;
-    --espace-l: 1.6em;
+    --espace-l: 1.8em;
     --espace-xxxl: 14em;
 
     /* ombres */
-    --ombre: 5px 5px 10px silver;
+    --ombre-boutton: 5px 5px 10px rgb(190, 190, 190);
+    --ombre-bloc: 0px 5px 5px rgb(220, 218, 218);
+
+    /* Rayon de la bordure */
+    --rayon-bordure-s: 1em;
+    --rayon-bordure-m: 2em;
+    --rayon-bordure-rond: 50%;
 }
 
-body{ 
+body { 
     padding: 0;
     margin: 0;
+    text-align: center;
+    font-family: var(--police-texte);
+}
+
+h2{
+    font-size: var(--font-size-l)
+}
+
+/* En-tête */
+header div {
+    white-space: pre-line; 
+}
+
+@media screen and (min-width: 1024px) {
+    header div {
+        white-space: normal; 
+    }
+}
+
+header div:first-child {
+    padding: var(--espace-m);
+    box-shadow: var(--ombre-bloc);
+    position: relative;
+    z-index: 1000;
+}
+
+header div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espace-s);
+    background-color: var(--gris);
+    font-size: var(--font-size-m);
+}
+
+header div:last-child { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espace-m);
+    background-color: var(--gris-clair);
+    padding: var(--espace-l);
+}
+
+header div:last-child *{
+    margin: 0;
+}
+
+header div:last-child button {
+    background: linear-gradient(to bottom, var(--couleur-secondaire), var(--couleur-primaire));
+    border: none;
+    border-radius: var(--rayon-bordure-m);
+    padding: var(--espace-xs) var(--espace-m);
+    color: var(--blanc);
+    font-size: var(--font-size-xm);
+    box-shadow: var(--ombre-boutton);
 }
