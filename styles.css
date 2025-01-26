@@ -20,6 +20,7 @@
     --police-titre: "Shrikhand", sans-serif;
 
     /* espaces */
+    --espace-xxxs: 0.2em;
     --espace-xxs: 0.4em;
     --espace-xs: 0.8em;
     --espace-s: 1em;
@@ -114,7 +115,57 @@ header div:last-child button {
     box-shadow: var(--ombre-boutton);
 }
 
+/* Corps de page */
+main section {
+    padding: var(--espace-m) var(--espace-xs);
+    text-align: left;
+}
 
+@media screen and (min-width: 1024px) {
+    main section {
+        padding: var(--espace-m) var(--espace-xxxl);
+    }
+}
+
+/* Fonctionnement */
+main section:first-child > div {
+    padding-left: var(--espace-s);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: var(--espace-m);
+}
+
+@media screen and (min-width: 1024px) {
+    main section:first-child > div {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+main section:first-child > div div {
+    background-color: var(--gris-clair);
+    padding: var(--espace-xs);
+    border-radius: var(--rayon-bordure-s);
+    box-shadow: var(--ombre-bloc);
+
+}
+
+main section div a div p {
+    display: inline-block;
+    height: var(--espace-m);
+    aspect-ratio: 1 / 1;
+    background-color: var(--couleur-primaire);
+    border-radius: var(--rayon-bordure-rond);
+    margin-left: -25px;
+    margin-right: var(--espace-xxs);
+    color: var(--blanc);
+    text-align: center;
+
+}
+
+main section:first-child > div div i {
+    color: var(--gris-fonce);
+}
 
 
 /* Pied de page */
