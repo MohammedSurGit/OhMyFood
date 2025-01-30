@@ -69,6 +69,7 @@ a {
     color: inherit
 }
 
+
 /* En-tête */
 header div {
     white-space: pre-line; 
@@ -243,14 +244,9 @@ main section:first-child > div div i {
     transition: all ease-in 0.1ms;
 }
 
-.restaurant-card > div > i:hover {
-    font-weight: 900;
+.restaurant-card > div > i.filled {
     color: red;
-    transition: all ease-in 0.1ms;
 }
-
-
-
 
 
 /* Pied de page */
